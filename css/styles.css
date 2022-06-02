@@ -19,7 +19,7 @@
     --teams-bg: #F5F4FA;
     --heder-border: #ECECEC;
     --hero-bgr: #C4C4C4;
-    
+    --icon-color: #afb1b8; 
 }
 h1,h2,h3,h4,h5,h6,p,ul{
    margin-top: 0px;
@@ -44,7 +44,7 @@ img{
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    /* outline: 1px solid tomato; */
+    outline: 1px solid blue;
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -271,9 +271,15 @@ width: calc((100% - 90px) / 4);
 }
 .profession{
     padding-top: 30px;
-    padding-bottom: 30px;
+}
+.social-network{
+    padding: 0 32px;
+    margin-top: 16px;
+    display: flex;
 }
 .social{
+    padding-left: 0;
+    padding-right: 0;
     display: inline-block;
     width: 44px;
     height: 44px;
@@ -281,12 +287,23 @@ width: calc((100% - 90px) / 4);
     text-align: center;
     border: none;
     cursor: pointer;
+    background-color: var(--main-bg);
+    color: var(--icon-color);
 
 }
-.social:hover{
-    background-color: var(--btn-and-accent);
-    
+.social-network .social + .social{
+        margin-left: 10px;
+    }
+.icon {
+    fill: currentColor;
 }
+.social:hover
+{
+    color: var(--main-bg);
+    background-color: var(--btn-and-accent);
+
+}
+
 .feature-list .title{
     color: var(--h-color-text);
     font-weight: 700;
@@ -341,10 +358,42 @@ width: calc((100% - 90px) / 4);
     padding-right: 0px;
 }
 
+/* our-clients */
+.our-clients {
+    outline: 1px solid tomato;
+}
+.clients{
+    display: flex;
+    text-align: center;
+   padding: 16px 32px; 
+   padding: 0;
+}
+ 
+.clients .item + .item{
+    margin-left: 30px;
+}
+.clients .btn-client{
+    display: block;
+    padding: 16px 32px;
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+    color: var(--icon-color);
+    cursor: pointer;
+}
+.client {
+    fill: currentColor;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.clients .btn-client:hover{
+    color: var(--btn-and-accent);
+    border: 1px solid var(--btn-and-accent);
+}
 /* FOOTEr */
 .footer{
-        padding-top: 60px;
-        padding-bottom: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     background-color: var(--second-bg);
 }
 
@@ -381,6 +430,25 @@ padding-left: 0px;
 .footer-text{
     color: var(--main-bg);
 
+}
+
+.footer-social{
+    display: flex;
+}
+.social-adres{
+    margin-top: 12px;
+    margin-left: 70px;
+}
+
+.join{
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.bgr{
+    background: rgba(255, 255, 255, 0.1);
+}
+.bgr .icon{
+    fill: var(--main-bg);
 }
 
 /* portfolio */
